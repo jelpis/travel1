@@ -20,11 +20,12 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: var(--whiteColorDeam);
   width: 100%;
   padding: 1rem;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
 
   .logo {
     color: var(--blackColor);
@@ -32,6 +33,11 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    .icon {
+      font-size: 25px;
+      color: var(--PrimaryColor);
+      transform: translateY(5px);
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -43,6 +49,7 @@
       border-radius: 1rem;
       top: 6rem;
       left: 50%;
+      padding: 1rem;
       transform: translate(-50%);
       z-index: 2000;
       box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
@@ -81,6 +88,15 @@
         right: 1.5rem;
         color: var(--SecondaryColor);
       }
+    }
+  }
+  .toggleNavbar {
+    .icon {
+      font-size: 25px;
+      color: var(--PrimaryColor);
+    }
+    &:hover.icon {
+      color: var(--SecondaryColor);
     }
   }
 }

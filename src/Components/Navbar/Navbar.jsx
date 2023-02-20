@@ -3,8 +3,10 @@ import './navbar.css';
 import { MdOutlineTravelExplore } from 'react-icons/md';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [active, setActive] = useState('navBar');
   return (
     <section className="navBarSection">
       <header className="header flex">
@@ -16,7 +18,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="navBar">
+        <div className={active}>
           <ul className="navList flex">
             <li className="navItem">
               <a href="#" className="navLink">
