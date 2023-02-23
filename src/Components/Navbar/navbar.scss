@@ -30,17 +30,17 @@
 
   .logo {
     color: var(--blackColor);
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      font-size: 25px;
+      color: var(--PrimaryColor);
+      transform: translateY(5px);
+    }
   }
-  //   font-weight: 600;
-  //   cursor: pointer;
-  //   align-items: center;
-  //   justify-content: center;
-  //   .icon {
-  //     font-size: 25px;
-  //     color: var(--PrimaryColor);
-  //     transform: translateY(5px);
-  //   }
-  // }
 
   @media screen and (max-width: 768px) {
     .navBar {
@@ -55,9 +55,9 @@
       transform: translate(-50%);
       z-index: 2000;
       box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-      transition: 0.3s ease-in-out;
+      transition: 0.5s ease-in-out;
 
-      .navList {
+      .navLists {
         flex-direction: column;
         justify-content: center;
         width: 100%;
@@ -76,6 +76,7 @@
             }
           }
         }
+
         .btn {
           margin-top: 1rem;
 
@@ -89,7 +90,10 @@
         position: absolute;
         top: 1rem;
         right: 1.5rem;
-        color: var(--SecondaryColor);
+        color: var(--PrimaryColor);
+        &:hover {
+          color: var(--SecondaryColor);
+        }
       }
     }
 
@@ -99,7 +103,6 @@
   }
   .toggleNavbar {
     // position: absolute;
-
     .icon {
       font-size: 25px;
       color: var(--PrimaryColor);
@@ -107,5 +110,65 @@
     &:hover.icon {
       color: var(--SecondaryColor);
     }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+
+    //check .navItem
+    .navBar {
+      .navLists {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        .navItem {
+          .navLink {
+            color: var(--textColor);
+            padding: 0 0.45rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            &:hover {
+              color: var(--PrimaryColor);
+            }
+          }
+        }
+
+        .btn {
+          margin-left: 1rem;
+          a {
+            color: var(--whiteColor);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    .navBar {
+      .navLists {
+        .navItem {
+          padding: 0 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 8.5rem;
   }
 }

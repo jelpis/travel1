@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
         <div className={active}>
-          <ul className="navList flex">
+          <ul className="navLists flex">
             <li className="navItem">
               <a href="#" className="navLink">
                 Home
@@ -75,6 +75,7 @@ const Navbar = () => {
             <AiFillCloseCircle className="icon" />
           </div>
         </div>
+
         <div onClick={showNav} className="toggleNavbar">
           <TbGridDots className="icon" />
         </div>
